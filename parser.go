@@ -20,12 +20,12 @@ type Headers struct {
 	To                   *string
 	MessageID            *string `json:"Message-ID,omitempty"`
 	Subject              *string
-	MimeVersion          *string `json:"Mime-Version,omitempty"`
-	ContentType          *string `json:"Content-Type,omitempty"`
-	DKIMSignature        *string `json:"DKIM-Signature,omitempty"`
-	XGoogleDKIMSignature *string `json:"X-Google-DKIM-Signature,omitempty"`
-	XGmMessageState      *string `json:"X-Gm-Message-State,omitempty"`
-	XReceived            *string `json:"X-Received,omitempty"`
+	MimeVersion          *string     `json:"Mime-Version,omitempty"`
+	ContentType          *string     `json:"Content-Type,omitempty"`
+	DKIMSignature        *string     `json:"DKIM-Signature,omitempty"`
+	XGoogleDKIMSignature *string     `json:"X-Google-DKIM-Signature,omitempty"`
+	XGmMessageState      *string     `json:"X-Gm-Message-State,omitempty"`
+	XReceived            interface{} `json:"X-Received,omitempty"` // XReceived may be a string or a string slice
 }
 
 // Envelope type holds Envelope data
