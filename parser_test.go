@@ -16,9 +16,7 @@ func TestParser(t *testing.T) {
 		t.Fatal(err.Error())
 	}
 
-	var r *Response
-
-	err = json.Unmarshal(expectedJSON, &r)
+	r, err := Parse(expectedJSON)
 
 	if err != nil {
 		t.Fatal(err.Error())
