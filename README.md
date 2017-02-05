@@ -5,7 +5,7 @@
 
 See tests for more. Simple usage example (an email with txt attachment):
 
-```
+```go
 package main
 
 import (
