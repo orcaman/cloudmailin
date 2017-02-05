@@ -1,4 +1,4 @@
-# cloudmailin
+# cloudmailin [![CircleCI](https://circleci.com/gh/orcaman/cloudmailin.svg?style=svg)](https://circleci.com/gh/orcaman/cloudmailin)
 `cloudmailin` is an unofficial parser libary for `JSON` responses coming from [CloudMailin](https://www.cloudmailin.com/) service. 
 
 ## usage
