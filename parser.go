@@ -1,6 +1,6 @@
 package cloudmailin
 
-import "fmt"
+import "encoding/json"
 
 // Response instances contain the data of the JSON response form CloudMailin
 type Response struct {
@@ -56,5 +56,13 @@ type Attachment struct {
 
 // Parse parsed the incoming email data and returns a Parsed instance
 func Parse(data []byte) (*Response, error) {
-	return nil, fmt.Errorf("Parse function not implemented")
+	var r *Response
+
+	err := json.Unmarshal(data, &r)
+
+	if err != nil {
+		return nil, err
+	}
+
+	return r, nil
 }
